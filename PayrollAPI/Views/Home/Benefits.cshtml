@@ -1,0 +1,28 @@
+﻿@model PayrollAPI.Models.Benefits
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Number of Dependents</title>
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+        <p>Employee name: @Html.TextBoxFor(x => x.EmployeeName) </p>
+        <p>Names of Dependents (CSV): @Html.TextBoxFor(x => x.Dependents)</p>
+        <p />
+        <p>@Html.DisplayFor(x => x.Message) </p>
+        <p>@Html.DisplayFor(x => x.GrossPayMessage) </p>
+        <p>@Html.DisplayFor(x => x.CostMessage) </p>
+        <p>@Html.DisplayFor(x => x.NetPayMessage) </p>
+
+        <input type="submit" value="Submit Dependents" />
+    }
+</body>
+</html>
